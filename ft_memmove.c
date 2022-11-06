@@ -6,7 +6,7 @@
 /*   By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 03:20:21 by frueda-m          #+#    #+#             */
-/*   Updated: 2022/11/05 03:37:38 by frueda-m         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:03:37 by frueda-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-
 	if (!dst && !src)
 		return (dst);
 	if (src < dst)

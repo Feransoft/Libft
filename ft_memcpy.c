@@ -6,7 +6,7 @@
 /*   By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 02:57:47 by frueda-m          #+#    #+#             */
-/*   Updated: 2022/11/05 03:13:00 by frueda-m         ###   ########.fr       */
+/*   Updated: 2022/11/05 17:03:21 by frueda-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 
 	d = (unsigned char *)dst;
 	s = (unsigned char *)src;
-
 	if (!dst && !src)
 		return (dst);
 	while (n--)
