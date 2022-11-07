@@ -1,0 +1,11 @@
+#Obj Libfy
+*.o
+libft.a
+
+#Files VSCode
+.vscode
+.DS_store
+
+#Folder...
+objs
+
