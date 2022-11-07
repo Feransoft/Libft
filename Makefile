@@ -6,7 +6,7 @@
 #    By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 14:51:32 by frueda-m          #+#    #+#              #
-#    Updated: 2022/11/05 15:27:30 by frueda-m         ###   ########.fr        #
+#    Updated: 2022/11/07 02:58:05 by frueda-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,25 +28,36 @@ LIB = ar rc $(NAME)
 
 RANLIB = ranlib $(NAME)
 
-REMOVE = rm -f
+REMOVE = rm -rf
+
+OBJS_DIR = objs/
+OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJ))
+
+$(OBJS_DIR)%.o : %.c libft.h
+	@mkdir -p $(OBJS_DIR)
+	@echo "Compiling: $<"
+	@$(COMPILE) $< -o $@
 
 all: $(NAME)
 
-$(NAME):
-	@$(COMPILE) $(SRC)
-	@$(LIB) $(OBJ)
-	@$(RANLIB)
-
+$(NAME): $(OBJECTS_PREFIXED)
+	@$(LIB) $(OBJECTS_PREFIXED)
+	@echo "Libft Done !"
+	
 bonus:
 	@$(COMPILE) $(SRC_BONUS)
 	@$(LIB) $(OBJ_BONUS)
 	@$(RANLIB)
 
 clean:
-	@$(REMOVE) $(OBJ)
+	@$(REMOVE) $(OBJS_DIR)
 
 fclean: clean
 	@$(REMOVE) $(NAME)
 
 re: fclean all
+
+so:
+	gcc -fPIC -c $(SRC)
+	gcc -shared -Wl,-soname,libft.so -o libft.so *.o
 .PHONY: all clean fclean re
