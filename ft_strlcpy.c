@@ -6,7 +6,7 @@
 /*   By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 13:08:08 by frueda-m          #+#    #+#             */
-/*   Updated: 2022/11/07 03:44:32 by frueda-m         ###   ########.fr       */
+/*   Updated: 2022/11/07 15:56:03 by frueda-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 			dst[i] = src[i];
 			i++;
 		}
-		dst[i] = 0;
+		dst[i] = '\0';
 	}
 	while (src[i])
 		i++;

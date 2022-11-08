@@ -6,7 +6,7 @@
 /*   By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 02:05:44 by frueda-m          #+#    #+#             */
-/*   Updated: 2022/11/06 03:51:53 by frueda-m         ###   ########.fr       */
+/*   Updated: 2022/11/07 16:04:14 by frueda-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,6 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *string);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
