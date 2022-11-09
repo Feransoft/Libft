@@ -6,16 +6,17 @@
 /*   By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 02:05:44 by frueda-m          #+#    #+#             */
-/*   Updated: 2022/11/07 16:04:14 by frueda-m         ###   ########.fr       */
+/*   Updated: 2022/11/09 01:15:15 by frueda-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <string.h>
 # include <stdlib.h>
+# include <unistd.h>
 
+// Part 1 Functions
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
@@ -39,6 +40,11 @@ char	*ft_strchr(const char *str, int c);
 char	*ft_strrchr(const char *str, int c);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 char	*ft_strdup(const char *string);
+
+// Part 2 Functions
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 
 #endif

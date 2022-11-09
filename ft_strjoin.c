@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 18:17:23 by frueda-m          #+#    #+#             */
-/*   Updated: 2022/11/08 21:06:32 by frueda-m         ###   ########.fr       */
+/*   Created: 2022/11/08 15:05:22 by frueda-m          #+#    #+#             */
+/*   Updated: 2022/11/08 20:18:35 by frueda-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str;
-	size_t	strlen;
+	char	*ccat;
+	int		len_s1;
+	int		len_s2;
 
-	if (s == NULL)
+	if (!s1 || !s2)
 		return (NULL);
-	strlen = ft_strlen(s);
-	if (start > strlen)
-	{
-		str = malloc(sizeof(char));
-		if (str != NULL)
-			str[0] = '\0';
-		return (str);
-	}
-	if (len > strlen - start)
-		len = strlen - start;
-	str = malloc(sizeof(char) * len + 1);
-	if (str == NULL)
+	len_s1 = (ft_strlen((char *)s1));
+	len_s2 = (ft_strlen((char *)s2));
+	ccat = (char *)malloc((len_s1 + len_s2 + 1) * sizeof(char));
+	if (ccat == NULL)
 		return (NULL);
-	ft_strlcpy(str, s + start, len + 1);
-	return (str);
+	ft_strlcpy(&ccat[0], s1, len_s1 + 1);
+	ft_strlcpy(&ccat[len_s1], s2, len_s2 + 1);
+	return (ccat);
 }
