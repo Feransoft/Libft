@@ -6,7 +6,7 @@
 #    By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 14:51:32 by frueda-m          #+#    #+#              #
-#    Updated: 2022/11/09 12:20:13 by frueda-m         ###   ########.fr        #
+#    Updated: 2022/11/09 13:57:17 by frueda-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = libft.a
 
 SRC = 				ft_isalnum.c ft_isprint.c ft_memcmp.c ft_strjoin.c ft_strtrim.c ft_putendl_fd.c \
 					ft_strlcat.c ft_strncmp.c ft_atoi.c ft_isalpha.c ft_split.c ft_putstr_fd.c \
-					ft_memcpy.c ft_strchr.c  ft_strlcpy.c ft_substr.c ft_strmapi.c \
+					ft_memcpy.c ft_strchr.c  ft_strlcpy.c ft_substr.c ft_strmapi.c ft_itoa.c\
 					ft_strnstr.c ft_tolower.c ft_bzero.c ft_isascii.c ft_striteri.c \
 					ft_memmove.c ft_strdup.c  ft_strlen.c  ft_strrchr.c ft_putchar_fd.c \
 					ft_toupper.c ft_calloc.c  ft_isdigit.c ft_memchr.c  ft_memset.c
