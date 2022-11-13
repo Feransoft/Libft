@@ -6,7 +6,7 @@
 #    By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 14:51:32 by frueda-m          #+#    #+#              #
-#    Updated: 2022/11/13 17:06:10 by frueda-m         ###   ########.fr        #
+#    Updated: 2022/11/13 17:47:07 by frueda-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,7 +56,4 @@ fclean: clean
 
 re: fclean all
 
-so:
-	gcc -fPIC -c $(SRC)
-	gcc -shared -Wl,-soname,libft.so -o libft.so *.o
 .PHONY: all clean fclean re
