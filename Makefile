@@ -6,7 +6,7 @@
 #    By: frueda-m <frueda-m@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/05 14:51:32 by frueda-m          #+#    #+#              #
-#    Updated: 2022/11/13 17:47:07 by frueda-m         ###   ########.fr        #
+#    Updated: 2022/11/13 18:24:46 by frueda-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,7 +49,7 @@ bonus:
 	@$(RANLIB)
 
 clean:
-	@$(REMOVE) $(OBJ)
+	@$(REMOVE) $(OBJ) $(OBJ_BONUS)
 
 fclean: clean
 	@$(REMOVE) $(NAME)
